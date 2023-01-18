@@ -1,7 +1,7 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
 import Brewery from "../Components/Brewery.jsx"
-import {getBreweries} from "../Services/characters.js";
+import {getBreweries} from "../Services/breweries.js";
 
 export default function Breweries() {
     const [breweries, setBreweries] = useState([]);

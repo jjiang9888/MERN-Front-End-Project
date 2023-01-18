@@ -13,6 +13,7 @@ export const getBreweries = async() => {
 export const getBrewery = async(id) => {
     try {
         const response = await api.get(`/breweries/${id}`)
+        return response.data;
     } catch (error) {
         throw error;
 }   

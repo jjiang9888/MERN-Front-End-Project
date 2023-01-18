@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react';
-import { deleteBrewery, getBrewery } from '../Services/characters';
+import { deleteBrewery, getBrewery } from '../Services/breweries.js';
 import {Link, useParams, useNavigate} from "react-router-dom";
 
 
@@ -10,15 +10,19 @@ export default function BrewDet() {
     let {id} = useParams()
     let navigate = useNavigate();
 
-    useEffect(( )=> {
+    useEffect(()=> {
         fetchBrewery();
-    },[])
+    },[id]);
 
     async function fetchBrewery() {
         let oneBrewery =  await getBrewery(id);
         setBrewery(oneBrewery);
     }
-    
+
+    async function handleDelete() {
+        await deleteBrewery(id)
+        navigate("/breweries", {replace:true});
+    }    
     return (
         <div>
             <h2>{brewery.name}</h2>
@@ -26,6 +30,13 @@ export default function BrewDet() {
             <p>{brewery.street}</p>
             <p>{brewery.city}</p>
             <p>{brewery.state}</p>
-        </div>
+            <div>
+            <Link to={`/breweries/${brewery._id}/edit`}>
+                <button>Edit Brewery</button>
+            </Link>
+            <button onClick={handleDelete}>Delete the Brewery</button>
+            </div>
+        </div>  
+
     )
 };
