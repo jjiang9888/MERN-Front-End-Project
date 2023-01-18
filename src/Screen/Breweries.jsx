@@ -1,12 +1,13 @@
 import React from 'react';
 import { useEffect,useState } from 'react';
-import {getBreweries} from "../Services/characters";
+import Brewery from "../Components/Brewery.jsx"
+import {getBreweries} from "../Services/characters.js";
 
 export default function Breweries() {
-    const [breweries, setBreweries] = useState([])
+    const [breweries, setBreweries] = useState([]);
 
     useEffect(() => {
-        fetchBreweries()
+        fetchBreweries();
     },[])
 
     async function fetchBreweries() {
@@ -17,6 +18,11 @@ export default function Breweries() {
   return (
     <div>
         <h1>Breweries</h1>
+        {
+         breweries.map((breweryData) => (
+            <Brewery brewery={breweryData} key={breweryData._id} />
+         ))   
+        }
     </div>
   )
 };
