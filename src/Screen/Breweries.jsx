@@ -16,8 +16,8 @@ export default function Breweries() {
     }
 
   return (
-    <div>
-        <h1>Breweries</h1>
+    <div className="Breweries-Page">
+        <h1 className='Breweries-Title'>Locations</h1>
         {
          breweries.map((breweryData) => (
             <Brewery brewery={breweryData} key={breweryData._id} />

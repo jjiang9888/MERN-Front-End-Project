@@ -9,24 +9,37 @@ export default function BrewCreate() {
         "brewery_type": "",
         "street": "",
         "city": "",
-        "state": ""   
+        "state": ""
     })
 
     let navigate = useNavigate();
 
     const handleSubmit = async(e) => {
-        e.preventDefault()
-        await createBrewery(brewery)
+        e.preventDefault();
+        await createBrewery(brewery);
         navigate(`/breweries/${brewery._id}`, {replace:true});
-    }
+    };
 
-    const handleChange = () => {
+    const handleChange = (e) => {
+        const{value, name}= e.target;
 
-    }
+        setBrewery((prev) => ({
+            ...prev,
+            [name]:value
+        }))
+    };
+
     return (
         <div>
             <h1>Brewery Creation</h1>
-            <form onSubmit={handleSubmit}>
+            <form className="create-form" onSubmit={handleSubmit}>
+            <input
+                    type="text"
+                    placeholder="Enter Brewery ID"
+                    name="_id"
+                    value={brewery._id}
+                    onChange={handleChange}
+                />
                 <input
                     type="text"
                     placeholder="Enter Brewery name"

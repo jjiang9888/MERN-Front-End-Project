@@ -7,12 +7,12 @@ export default function BrewDet() {
 
     const [brewery, setBrewery]=useState({});
 
-    let {id} = useParams()
+    let {id} = useParams();
     let navigate = useNavigate();
 
     useEffect(()=> {
         fetchBrewery();
-    },[id]);
+    },[]);
 
     async function fetchBrewery() {
         let oneBrewery =  await getBrewery(id);
@@ -20,9 +20,10 @@ export default function BrewDet() {
     }
 
     async function handleDelete() {
-        await deleteBrewery(id)
+        await deleteBrewery(id);
         navigate("/breweries", {replace:true});
     }    
+
     return (
         <div>
             <h2>{brewery.name}</h2>

@@ -3,10 +3,10 @@ import { NavLink } from 'react-router-dom';
 
 export default function Nav() {
   return (
-    <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/Breweries">Breweries</NavLink>
-        <NavLink to="/add-brewery">Add a brewery.</NavLink>
+    <nav className="navBar">
+        <NavLink className="navLinks" to="/">Home</NavLink>
+        <NavLink className="navLinks" to="/Breweries">Breweries</NavLink>
+        <NavLink className="navLinks" to="/add-brewery">Add Brewery</NavLink>
     </nav>
   )
 }   

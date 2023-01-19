@@ -1,3 +1,58 @@
 .App {
   text-align: center;
 }
+
+.create-form {
+  display: flex;
+  flex-direction:column;
+}
+
+a { 
+  color: blue;
+}
+
+.navBar {
+  text-align:center;
+  margin: auto;
+  background-color: black;
+}
+
+.navLinks {
+  padding: 10px;
+  color: yellow;
+  font-size: 25px;
+  font-weight: 800;
+  width: 33.33%; 
+  text-align: center;
+}
+
+.welcome {
+  text-align:center;
+  background-image:url('../images/beers.jpg');
+  background-size:cover;
+  background-repeat:no-repeat;
+  font-size:x-large;
+  font-weight: bolder;
+  padding-top: 1cm;
+  padding-left:20cm;
+  color:yellow;
+  height:800px;
+}
+
+.brewery-entry {
+  text-align: center;
+}
+
+.Breweries-Title {
+  text-align: center;
+  color: yellow;
+  margin: 0;
+}
+
+.Breweries-Page {
+  background-image: url('../images/beers.jpeg');
+  background-size:2700px 2700px;
+  background-repeat:no-repeat;
+  background-position: center;
+  
+}
