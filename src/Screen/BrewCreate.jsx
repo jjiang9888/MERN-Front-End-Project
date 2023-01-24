@@ -10,7 +10,7 @@ export default function BrewCreate() {
         "street": "",
         "city": "",
         "state": ""
-    })
+    });
 
     let navigate = useNavigate();
 
@@ -21,7 +21,7 @@ export default function BrewCreate() {
     };
 
     const handleChange = (e) => {
-        const{value, name}= e.target;
+        const{ value, name }= e.target;
 
         setBrewery((prev) => ({
             ...prev,
@@ -34,50 +34,50 @@ export default function BrewCreate() {
             <h1>Brewery Creation</h1>
             <form className="create-form" onSubmit={handleSubmit}>
             <input
-                    type="text"
-                    placeholder="Enter Brewery ID"
-                    name="_id"
-                    value={brewery._id}
-                    onChange={handleChange}
-                />
-                <input
-                    type="text"
-                    placeholder="Enter Brewery name"
-                    name="name"
-                    value={brewery.name}
-                    onChange={handleChange}
-                />
-                 <input
-                    type="text"
-                    placeholder="Enter Brewery type"
-                    name="brewery_type"
-                    value={brewery.brewery_type}
-                    onChange={handleChange}
-                />
-                 <input
-                    type="text"
-                    placeholder="Enter Brewery's street address"
-                    name="street"
-                    value={brewery.street}
-                    onChange={handleChange}
-                />
-                 <input
-                    type="text"
-                    placeholder="Enter Brewery's city location."
-                    name="city"
-                    value={brewery.city}
-                    onChange={handleChange}
-                />
-                 <input
-                    type="text"
-                    placeholder="Enter Brewery's state located in"
-                    name="state"
-                    value={brewery.state}
-                    onChange={handleChange}
-                />
+                type="text"
+                placeholder="Enter Brewery ID"
+                name="_id"
+                value={brewery._id}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                placeholder="Enter Brewery name"
+                name="name"
+                value={brewery.name}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                placeholder="Enter Brewery type"
+                name="brewery_type"
+                value={brewery.brewery_type}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                placeholder="Enter Brewery's street address"
+                name="street"
+                value={brewery.street}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                placeholder="Enter Brewery's city location."
+                name="city"
+                value={brewery.city}
+                onChange={handleChange}
+            />
+            <input
+                type="text"
+                placeholder="Enter Brewery's state located in"
+                name="state"
+                value={brewery.state}
+                onChange={handleChange}
+            />
                 <button type="submit">Enter Brewery entry here.</button>
             </form>
         </div>
-    )
-};
+    );
+}
 

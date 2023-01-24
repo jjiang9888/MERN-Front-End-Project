@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 import { deleteBrewery, getBrewery } from '../Services/breweries.js';
-import {Link, useParams, useNavigate} from "react-router-dom";
+import { Link, useParams, useNavigate } from "react-router-dom";
 
 
 export default function BrewDet() {
@@ -38,6 +38,5 @@ export default function BrewDet() {
             <button onClick={handleDelete}>Delete the Brewery</button>
             </div>
         </div>  
-
-    )
-};
+    );
+}

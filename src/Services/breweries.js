@@ -30,7 +30,7 @@ export const createBrewery = async(breweryData) => {
 
 export const updateBrewery = async(id, breweryData) => {
     try{
-        const response = await api.put(`/breweries${id}`,breweryData);
+        const response = await api.put(`/breweries/${id}`,breweryData);
         return response.data;
     } catch (error) {
         throw error;
@@ -39,7 +39,7 @@ export const updateBrewery = async(id, breweryData) => {
 
 export const deleteBrewery = async(id) => {
     try{
-        const response = await api.delete(`/breweries${id}`);
+        const response = await api.delete(`/breweries/${id}`);
         return response.data;
     } catch (error) {
         throw error;
